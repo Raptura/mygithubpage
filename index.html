@@ -67,34 +67,66 @@
     </div>
 
 
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="10"
+             aria-valuemin="0" aria-valuemax="100" style="width:10%">
+            Site Progress: 10%
+        </div>
+    </div>
+
     <!-------------------------------------------Side Bar----------------------------------------------------->
 
-    <aside class="col-md-2" id="siteSideBar">
-        <div>
-            <ul contenteditable="false" style="list-style-type: none">
-                <li>
-                    <button type="button">About Me</button>
-                </li>
-                <li>
-                    <button type="button">Code Examples</button>
-                </li>
-            </ul>
+    <aside class="col-md-2 col-xs-12" id="siteSideBar" style="position: fixed; z-index:999;">
+
+
+        <div class="btn-group-vertical">
+
+            <h3 class="text-center"> Navigation </h3>
+
+            <a type="button" class="btn btn-default">About Me</a>
+
+            <a type="button" class="btn btn-default">Code Examples</a>
+
+            <a type="button" class="btn btn-default">
+                Blog Posts
+                <span class="badge">0</span>
+            </a>
         </div>
     </aside>
 
     <!-------------------------------------------CONTENT----------------------------------------------------------------->
-    <div class="col-md-10">
-        <div style="height:1200px; z-index: 0"></div>
+    <div class="col-md-10 col-xs-12" style="margin-bottom:3%; margin-left:15%;">
+        <div id="contentPane" style="max-height:2400px; z-index: 0">
+
+            <section id="section1" style="min-height: 400px">
+                <h1>This site is currently under construction</h1>
+                <p>
+                    There are pretty cool features here though
+                </p>
+            </section>
+
+
+        </div>
+
+        <ul class="pagination" style="float:right">
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>
     </div>
+
+
 
     <!---------------------------Social Media Footer----------------------->
 
-    <footer class="col-md-12" id="socialFooter" style="bottom: 0; background-color:#b3b3ff; z-index:999; position:fixed; padding-bottom: 20px; border-top:1px solid white;  height: 40px">
+    <footer class="col-md-12 col-xs-12" id="socialFooter" style="bottom: 0; background-color:#b3b3ff; z-index:999; position:fixed; padding-bottom: 20px; border-top:1px solid white;  height: 40px">
 
         <!--<div style="float:left; margin-left: 5%; margin-top: 1.5%">-->
         <div class="col-md-2">
             <label style="text-align: center; font-size:1.25em;">
-                <strong>Social Media Links</strong>
+                <strong>Social Media</strong>
             </label>
         </div>
 
