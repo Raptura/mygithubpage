@@ -19,7 +19,7 @@
 </head>
 
 
-<body style="background-color: #b3b3ff">
+<body style="background-color: #b3b3ff" onload="main()">
 
     <!--------------------------------------CAROUSEL---------------------------------------------->
 
@@ -83,9 +83,9 @@
 
             <h3 class="text-center"> Navigation </h3>
 
-            <a type="button" class="btn btn-default">About Me</a>
+            <a type="button" class="btn btn-default" href="">About Me</a>
 
-            <a type="button" class="btn btn-default">Code Examples</a>
+            <a type="button" class="btn btn-default" href="">Code Examples</a>
 
             <a type="button" class="btn btn-default">
                 Blog Posts
@@ -96,24 +96,24 @@
 
     <!-------------------------------------------CONTENT----------------------------------------------------------------->
     <div class="col-md-10 col-xs-12" style="margin-bottom:3%; margin-left:15%;">
-        <div id="contentPane" style="max-height:2400px; z-index: 0">
+        <div id="contentPane" style="max-height:2400px; overflow:hidden; z-index: 0">
 
-            <section id="section1" style="min-height: 400px">
-                <h1>This site is currently under construction</h1>
-                <p>
-                    There are pretty cool features here though
-                </p>
-            </section>
+            <h1>This site is currently under construction</h1>
+            <p>
+                There are pretty cool features here though...
+            </p>
+
+            <!--Pages-->
+            <section id="page1" class="pagebody unhidden" style="min-height: 450px;"></section>
+            <section id="page2" class="pagebody hidden" style="min-height: 450px;"></section>
 
 
         </div>
 
-        <ul class="pagination" style="float:right">
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
+        <!--Content Pagination-->
+        <ul class="pagination" id="contentPagination" style="float:right">
+            <li class="active" onclick="switchPage(contentPagination, this, page1)"><a>1</a></li>
+            <li onclick="switchPage(contentPagination, this, page2)"><a>2</a></li>
         </ul>
     </div>
 
@@ -124,17 +124,12 @@
     <footer class="col-md-12 col-xs-12" id="socialFooter" style="bottom: 0; background-color:#b3b3ff; z-index:999; position:fixed; padding-bottom: 20px; border-top:1px solid white;  height: 40px">
 
         <!--<div style="float:left; margin-left: 5%; margin-top: 1.5%">-->
-        <div class="col-md-2">
-            <label style="text-align: center; font-size:1.25em;">
-                <strong>Social Media</strong>
-            </label>
+        <div class="col-md-4">
         </div>
 
-        <div class="col-md-8"></div>
-
-        <div class="col-md-2">
+        <div class="col-md-4">
             <!--Icons Div-->
-            <ul style="height: 35px;">
+            <ul style="height: 35px; text-align:center">
                 <!--Linkedin-->
                 <a href="https://www.linkedin.com/in/armond-smith-597137a2" style="text-decoration:none" title="Linkedin">
                     <img src="http://image.flaticon.com/icons/svg/34/34227.svg" style="height:100%;">
@@ -152,7 +147,6 @@
 
             </ul>
         </div>
-
 
     </footer>
 
